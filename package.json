@@ -10,7 +10,7 @@
     "produce": "node_modules/.bin/babel-node ./src/producers",
     "consume": "node_modules/.bin/babel-node ./src/consumers",
     "test": "NODE_ENV=test mocha --compilers js:babel-register ./test",
-    "package": "mkdir -p dist; tar -cvf dist/cw-api.tar --exclude='node_modules/**' ."
+    "package": "mkdir -p dist; tar -cvf dist/kue-example.tar --exclude='node_modules/**' ."
   },
   "description": "cron job",
   "dependencies": {
