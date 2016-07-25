@@ -1,5 +1,5 @@
 {
-  "name": "cron-job-kue-poc",
+  "name": "kue-example",
   "author": "raymondsze",
   "version": "0.0.1",
   "license": "MIT",
