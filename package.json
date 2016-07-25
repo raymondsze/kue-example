@@ -1,0 +1,47 @@
+{
+  "name": "cron-job-kue-poc",
+  "author": "raymondsze",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node node_modules/.bin/npm-run-all --parallel produce consume ui",
+    "ui": "node_modules/.bin/babel-node .",
+    "produce": "node_modules/.bin/babel-node ./src/producers",
+    "consume": "node_modules/.bin/babel-node ./src/consumers",
+    "test": "NODE_ENV=test mocha --compilers js:babel-register ./test",
+    "package": "mkdir -p dist; tar -cvf dist/cw-api.tar --exclude='node_modules/**' ."
+  },
+  "description": "cron job",
+  "dependencies": {
+    "babel-core": "^6.11.4",
+    "cron": "^1.1.0",
+    "express": "^4.14.0",
+    "kue": "^0.11.1",
+    "kue-ui": "^0.1.0",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.11.4",
+    "babel-eslint": "*",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-module-alias": "^1.6.0",
+    "babel-plugin-transform-async-to-module-method": "^6.8.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-preset-es2015-node5": "^1.2.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "eslint": "^2.3.0",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-import-resolver-babel-module-alias": "^1.4.2",
+    "eslint-loader": "^1.3.0",
+    "eslint-plugin-babel": "^3.2.0",
+    "eslint-plugin-flowtype": "^2.2.7",
+    "eslint-plugin-import": "^1.11.1",
+    "eslint-plugin-jsx-a11y": "^1.5.3",
+    "eslint-plugin-react": "^5.2.2",
+    "estraverse": "^4.2.0",
+    "estraverse-fb": "^1.3.1",
+    "npm-run-all": "^2.3.0"
+  }
+}
